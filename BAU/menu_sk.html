@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="menu_sk.css">
+    <script src="https://kit.fontawesome.com/bb8769d3b3.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="x-icon" href="obrazky/BAU PROFESSIONAL ultra transparent.png">
+    <title>BAU professional/menu</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#"><img src="obrazky/BAU PROFESSIONAL mini ultra se.png" class="logo" alt="" ></a></div>
+            <ul class="links">
+                <li><a href="#">Domov</a></li>
+                <li><a href="#">Ponuka prác</a></li>
+                <li><a href="#">Informácie pre firmy</a></li>
+                <li><a href="#">Požičanie auta</a></li>
+            </ul>
+            <a href="#" class="action_btn">Chcem prácu</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="#">Domov</a></li>
+            <li><a href="#">Ponuka prác</a></li>
+            <li><a href="#">Informácie pre firmy</a></li>
+            <li><a href="#">Požičanie auta</a></li>
+            <li><a href="#" class="action_btn">Get started</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-text">
+                <h1>Sme firma,<br>ktorá pomáha rásť.</h1>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    :'fa-solid fa-bars'
+}
+    </script>
+</body>
+</html>
